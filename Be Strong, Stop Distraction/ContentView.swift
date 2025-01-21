@@ -22,11 +22,20 @@ struct ContentView: View {
     @AppStorage("showSettings") var showSettings: Bool = true
     @State var counterFinished = false
     
+    @State var randomForMessage: Int = 0
+    
     @AppStorage("strongModeEnabled") var strongMode = false
     @AppStorage("AutoEnableStrongModeAfterTimes") var autoEnableStrongMode = 5
     @AppStorage("LastDayStrongModeCount") var lastDayStrongModeCount: Date = .now
     @AppStorage("AppOpenedThisDate") var appOpenedThisDay: Int = 0
     @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
+    
+    
+    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
+    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
+    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 120
+    
+    @AppStorage("showAppSetup") var showAppSetup = true
 
     var body: some View {
         NavigationStack {
@@ -61,6 +70,7 @@ struct ContentView: View {
                                     counterFinished = false
                                     runTimer = false
                                 } else if newPhase == .active {
+                                    randomForMessage = Int.random(in: 0..<10)
                                     if strongMode {
                                         setShortcutChangeImmediately(changeImmediately: true)
                                     }
@@ -86,7 +96,18 @@ struct ContentView: View {
                 
                 VStack {
                     if !counterFinished {
-                        Text("\(name), be strong, I know you can do this!")
+                        VStack {
+                            
+                            // random show some other supporting messages
+                            switch randomForMessage {
+                            case 0:
+                                Text("\(name), you can do it!")
+                            case 1:
+                                Text("some text")
+                            default:
+                                Text("\(name), be strong, I know you can do this!")
+                            }
+                        }
                     } else {
                         Text("Congrats, you did it, \(name)! Please consider if you really want to continue being distracted.")
                     }
@@ -102,37 +123,81 @@ struct ContentView: View {
                     showSettings = true
                 }
             }
+            .fullScreenCover(isPresented: $showAppSetup) {
+                SetUpView()
+            }
             .sheet(isPresented: $showSettings) {
                 NavigationStack {
                     Form {
-                        Section("Settings") {
-                            HStack {
-                                Text("Your Name:")
-                                TextField("Your Name", text: $name)
-                            }
-                            HStack {
-                                Text("Timer Duration")
-                                TextField("Timer Duration", value: $timerTime, format: .number)
+                        Section {
+                            NavigationLink("Settings") {
+                                Form {
+                                    Section("General") {
+                                        HStack {
+                                            Text("Your Name:")
+                                            TextField("Your Name", text: $name)
+                                        }
+                                        HStack {
+                                            Text("Timer Duration")
+                                            TextField("Timer Duration", value: $timerTime, format: .number)
 #if !os(macOS)
-                                    .keyboardType(.decimalPad)
+                                                .keyboardType(.decimalPad)
 #endif
+                                        }
+                                        HStack {
+                                            DatePicker("Lockdown Mode Start", selection: $extendedModeStart, displayedComponents: .hourAndMinute)
+                                        }
+                                        HStack {
+                                            DatePicker("Lockdown Mode End", selection: $extendedModeEnd, displayedComponents: .hourAndMinute)
+                                        }
+                                        VStack {
+                                            Text("Close distracting App in Lockdown Mode after \(Int(changeAppAfterSeconds)) Seconds")
+                                            Slider(value: $changeAppAfterSeconds, in: 15...300, step: 15)
+                                        }
+                                    }
+                                    Section {
+                                        HStack {
+                                            Toggle("Strong Mode", isOn: $strongMode)
+                                        }
+                                        VStack {
+                                            Stepper(value: $autoEnableStrongMode, in: 1...30) {
+                                                Text("Auto Strong Mode: \(autoEnableStrongMode)")
+                                            }
+                                            Text("")
+                                                .padding(0)
+                                        }
+                                    } header: {
+                                        Text("Strong Mode")
+                                    } footer: {
+                                        Text("When you opened the App  \(autoEnableStrongMode) times in Lockdown Mode, the Strong Mode will be activated.")
+                                    }
+                                }
                             }
                         }
+                        
                         Section {
-                            HStack {
-                                Toggle("Strong Mode", isOn: $strongMode)
+                            NavigationLink("Setup") {
+                                Form {
+                                    Section {
+                                        VStack(alignment: .leading) {
+                                            Text("Please download this Shortcut.")
+                                            Link("https://www.icloud.com/shortcuts/cca6a6d83d794efabe470ff27ef79e4b", destination: URL(string: "https://www.icloud.com/shortcuts/cca6a6d83d794efabe470ff27ef79e4b")!)
+                                        }
+                                        NavigationLink("Or build the Shortcut on your own") {
+                                            Image("Shortcut")
+                                                .resizable()
+                                                .scaledToFit()
+                                        }
+                                    }
+                                    
+                                    Section {
+                                        Text("Then, in the Shortcuts App, select Automations.")
+                                        Text("Create a new Automation (\"+\"), select when App opened. \nSelect all your distracting Apps (e.g. Instagram, TikTok, ...) and select \"Run Immediately\".")
+                                        Text("Click on \"Next\"\nSelect the downloaded \"Setup\" Shortcut")
+                                        Text("Congrats, your all done!")
+                                    }
+                                }.navigationTitle("Setup")
                             }
-                            VStack {
-                                Stepper(value: $autoEnableStrongMode, in: 1...30) {
-                                    Text("Auto Strong Mode: \(autoEnableStrongMode)")
-                                }
-                                Text("")
-                                    .padding(0)
-                            }
-                        } header: {
-                            Text("Strong Mode")
-                        } footer: {
-                            Text("When you opened the App  \(autoEnableStrongMode) times a day, the Strong Mode will be activated.")
                         }
                         
                         Section("Information") {

@@ -9,24 +9,43 @@ import Foundation
 import AppIntents
 import SwiftUI
 
-struct getStrongMode: AppIntent {
+struct whenToClose: AppIntent {
     
     @AppStorage("AppOpenedThisDate") var appOpenedThisDate: Int = 0
     @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
     
+    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 30
     
-    static var title = LocalizedStringResource("Is strong Mode enabled?")
-    static var description = IntentDescription("Returns a value whether the strong Mode is enabled or not.")
+    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
+    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
     
-//    func perform() async throws -> some IntentResult {
-//        let isStrongModeEnabled = UserDefaults.standard.bool(forKey: "strongModeEnabled")
-//        return .result(value: isStrongModeEnabled)
-//    }
     
-    func perform() async throws -> some ReturnsValue<Bool> {
-        appOpenedThisDate += 1
-        print("App Intent says: App opened \(closeAppImmediately) times.")
-        return .result(value: closeAppImmediately)
+    static var title = LocalizedStringResource("Stop Distraction in")
+    static var description = IntentDescription("Returns a Value when the distracting App should be closed.")
+    
+    func perform() async throws -> some ReturnsValue<Int> {
+        
+        if closeAppImmediately {
+            return .result(value: 0)
+        }
+        
+        // check if actual time i in between extended mode
+        if extendedModeStart.time > extendedModeEnd.time {
+            if extendedModeStart.time < Date().time {
+                appOpenedThisDate += 1
+                return .result(value: Int(changeAppAfterSeconds))
+            } else if extendedModeEnd.time < Date().time {
+                appOpenedThisDate += 1
+                return .result(value: Int(changeAppAfterSeconds))
+            }
+        } else {
+            if extendedModeStart.time < Date().time && extendedModeEnd.time > Date().time {
+                appOpenedThisDate += 1
+                return .result(value: Int(changeAppAfterSeconds))
+            }
+        }
+
+        return .result(value: 300)
     }
 }
 
