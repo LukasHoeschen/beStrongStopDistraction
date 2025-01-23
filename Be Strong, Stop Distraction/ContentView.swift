@@ -12,132 +12,116 @@ struct ContentView: View {
     
     @Environment(\.scenePhase) var scenePhase
     
-    @AppStorage("timerTime") var timerTime = 30
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    @State var runTimer = true
-    @AppStorage("userName") var name = ""
-    @State var timerTimeString = "30"
+//    @AppStorage("timerTime") var timerTime = 30
+//    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//    
+//    @State var runTimer = true
+//    @AppStorage("userName") var name = ""
+//    @State var timerTimeString = "30"
     @State var showSettings: Bool = false
-    @State var counterFinished = false
-    
+//    @State var counterFinished = false
+//    
     @State var randomForMessage: Int = 0
+//    
+//    @AppStorage("strongModeEnabled") var strongMode = false
+//    @AppStorage("AutoEnableStrongModeAfterTimes") var autoEnableStrongMode = 5
+//    @AppStorage("LastDayStrongModeCount") var lastDayStrongModeCount: Date = .now
+//    @AppStorage("AppOpenedThisDate") var appOpenedThisDay: Int = 0
+//    @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
+//    
+//    
+//    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
+//    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
+//    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 120
+//    
+//    @AppStorage("showAppSetup") var showAppSetup = true
     
-    @AppStorage("strongModeEnabled") var strongMode = false
-    @AppStorage("AutoEnableStrongModeAfterTimes") var autoEnableStrongMode = 5
-    @AppStorage("LastDayStrongModeCount") var lastDayStrongModeCount: Date = .now
-    @AppStorage("AppOpenedThisDate") var appOpenedThisDay: Int = 0
-    @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
-    
-    
-    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
-    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
-    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 120
-    
-    @AppStorage("showAppSetup") var showAppSetup = true
+    @StateObject var dataManager: DataControler = DataControler()
 
     var body: some View {
         NavigationStack {
             VStack {
-                if !counterFinished {
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    ZStack {
-                        CircularProgressView(progress: Double(counter) / Double(timerTime))
-                            .frame(width: 300, height: 300)
-                        
-                        Text("\(counter)")
-                            .font(.system(size: 72, weight: .bold, design: .default))
-                            .onAppear() {
-                                counter = timerTime
-                            }
-                            .onReceive(timer) { input in
-                                if runTimer {
-                                    if counter > 0 {
-                                        counter -= 1
-                                    } else if counter == 0 {
-                                        setShortcutChangeImmediately(changeImmediately: false)
-                                        counterFinished = true
-                                    }
-                                }
-                            }
-                            .onChange(of: scenePhase) { oldPhase, newPhase in
-                                if newPhase == .background {
-                                    counter = timerTime
-                                    counterFinished = false
-                                    runTimer = false
-                                } else if newPhase == .active {
-                                    randomForMessage = Int.random(in: 0..<11)
-                                    if strongMode {
-                                        setShortcutChangeImmediately(changeImmediately: true)
-                                    }
-                                    runTimer = true
-                                }
-                                if !Calendar.current.isDateInToday(lastDayStrongModeCount) {
-                                    appOpenedThisDay = 0
-                                    lastDayStrongModeCount = Date()
-                                    print("date set back")
-                                }
-                                if appOpenedThisDay == autoEnableStrongMode {
-                                    strongMode = true
-                                }
-                                
-                            }
-                    }.scaleEffect(counterFinished ? 0.3 : 1)
-                    Spacer()
-                }
-                
-                if !counterFinished {
-                    Spacer()
-                }
-                
-                VStack {
-                    if !counterFinished {
-                        VStack {
-                            // random show some other supporting messages
-                            switch randomForMessage {
-                            case 0:
-                                Text("\(name), you've got this!")
-                            case 1:
-                                Text("Stay focused, \(name)!")
-                            case 2:
-                                Text("One step at a time, \(name)!")
-                            case 3:
-                                Text("Keep going, \(name), you're doing great!")
-                            case 4:
-                                Text("\(name), every small step counts!")
-                            case 5:
-                                Text("Believe in yourself, \(name)!")
-                            case 6:
-                                Text("You're stronger than any distraction, \(name)!")
-                            case 7:
-                                Text("Focus on what matters most, \(name)!")
-                            case 8:
-                                Text("You've made it this far, \(name)!")
-                            case 9:
-                                Text("\(name), don't let distractions win!")
-                            default:
-                                Text("\(name), be strong, I know you can do this!")
-                            }
-                        }
-                    } else {
-                        Text("Congrats, you did it, \(name)! Please consider if you really want to continue being distracted.")
+                if dataManager.LastTimeDistractedAppWasOpened.distance(to: .now) < 1800 {
+                    if !dataManager.counterFinished {
+                        Spacer()
                     }
-                }.animation(.default, value: counter)
-                Spacer()
-                if counterFinished {
+                    HStack {
+                        Spacer()
+                        ZStack {
+                            CircularProgressView(progress: Double(dataManager.counter) / Double(dataManager.timerTime))
+                                .frame(width: 300, height: 300)
+                            
+                            Text("\(dataManager.counter)")
+                                .font(.system(size: 72, weight: .bold, design: .default))
+                            //                            .onAppear() {
+                            //                                dataManager.counter = dataManager.timerTime
+                            //                            }
+                                .onReceive(dataManager.timer) { input in
+                                    dataManager.timerStep()
+                                }
+                                .onChange(of: scenePhase) { oldPhase, newPhase in
+                                    dataManager.newScenePhase(newPhase: newPhase)
+                                }
+                        }.scaleEffect(dataManager.counterFinished ? 0.3 : 1)
+                        Spacer()
+                    }
+                    
+                    if !dataManager.counterFinished {
+                        Spacer()
+                    }
+                    
+                    VStack {
+                        if !dataManager.counterFinished {
+                            VStack {
+                                // random show some other supporting messages
+                                switch randomForMessage {
+                                case 0:
+                                    Text("\(dataManager.name), you've got this!")
+                                case 1:
+                                    Text("Stay focused, \(dataManager.name)!")
+                                case 2:
+                                    Text("One step at a time, \(dataManager.name)!")
+                                case 3:
+                                    Text("Keep going, \(dataManager.name), you're doing great!")
+                                case 4:
+                                    Text("\(dataManager.name), every small step counts!")
+                                case 5:
+                                    Text("Believe in yourself, \(dataManager.name)!")
+                                case 6:
+                                    Text("You're stronger than any distraction, \(dataManager.name)!")
+                                case 7:
+                                    Text("Focus on what matters most, \(dataManager.name)!")
+                                case 8:
+                                    Text("You've made it this far, \(dataManager.name)!")
+                                case 9:
+                                    Text("\(dataManager.name), don't let distractions win!")
+                                default:
+                                    Text("\(dataManager.name), be strong, I know you can do this!")
+                                }
+                            }
+                        } else {
+                            Text("Congrats, you did it, \(dataManager.name). Please consider if you really want to continue being distracted.")
+                        }
+                    }.animation(.default, value: dataManager.counter)
+                    Spacer()
+                    if dataManager.counterFinished {
+                        Spacer()
+                    }
+                } else {
+                    Spacer()
+                    Text("🎉")
+                        .font(.system(size: 50))
+                    Text("Here isn't a timer, because it seams like you didn't opened a distracting App for the last 30 Minutes. Congratulations")
                     Spacer()
                 }
             }
-            .animation(.bouncy, value: counterFinished)
+            .animation(.bouncy, value: dataManager.counterFinished)
             .toolbar{
                 Button("Info", systemImage: "info.circle") {
                     showSettings = true
                 }
             }
-            .fullScreenCover(isPresented: $showAppSetup) {
+            .fullScreenCover(isPresented: $dataManager.showAppSetup) {
                 SetUpView()
             }
             .sheet(isPresented: $showSettings) {
@@ -146,44 +130,50 @@ struct ContentView: View {
                         Section {
                             NavigationLink("Settings") {
                                 Form {
-                                    Section("General") {
+                                    Section {
                                         HStack {
                                             Text("Your Name:")
-                                            TextField("Your Name", text: $name)
+                                            TextField("Your Name", text: $dataManager.name)
                                         }
                                         HStack {
-                                            Text("Timer Duration")
-                                            TextField("Timer Duration", value: $timerTime, format: .number)
-#if !os(macOS)
-                                                .keyboardType(.decimalPad)
-#endif
+                                            DatePicker("Lockdown Mode Start", selection: $dataManager.extendedModeStart, displayedComponents: .hourAndMinute)
                                         }
                                         HStack {
-                                            DatePicker("Lockdown Mode Start", selection: $extendedModeStart, displayedComponents: .hourAndMinute)
+                                            DatePicker("Lockdown Mode End", selection: $dataManager.extendedModeEnd, displayedComponents: .hourAndMinute)
                                         }
-                                        HStack {
-                                            DatePicker("Lockdown Mode End", selection: $extendedModeEnd, displayedComponents: .hourAndMinute)
+                                        VStack(alignment: .leading) {
+                                            Text("Timer Duration \(Int(dataManager.timerTime)) Seconds")
+//                                            TextField("Timer Duration", value: $dataManager.timerTime, format: .number)
+//#if !os(macOS)
+//                                                .keyboardType(.decimalPad)
+//#endif
+                                            Slider(value: $dataManager.timerTime, in: 10...150, step: 10)
                                         }
-                                        VStack {
-                                            Text("Close distracting App in Lockdown Mode after \(Int(changeAppAfterSeconds)) Seconds")
-                                            Slider(value: $changeAppAfterSeconds, in: 15...300, step: 15)
+                                        VStack(alignment: .leading) {
+                                            Text("Close distracting App in Lockdown Mode after \(Int(dataManager.changeAppAfterSeconds)) Seconds")
+                                            Slider(value: $dataManager.changeAppAfterSeconds, in: 15...300, step: 15)
                                         }
+                                    } header: {
+                                        Text("General")
+                                    } footer: {
+                                        Text("When not in Lockdown Mode, distracting Apps get closed after 5 Minutes")
                                     }
                                     Section {
                                         HStack {
-                                            Toggle("Strong Mode", isOn: $strongMode)
+                                            Toggle("Strong Mode", isOn: $dataManager.strongMode)
+                                                .disabled(dataManager.inLockDownMode)
                                         }
-                                        VStack {
-                                            Stepper(value: $autoEnableStrongMode, in: 1...30) {
-                                                Text("Auto Strong Mode: \(autoEnableStrongMode)")
-                                            }
-                                            Text("")
-                                                .padding(0)
-                                        }
+//                                        VStack {
+//                                            Stepper(value: $dataManager.autoEnableStrongMode, in: 1...30) {
+//                                                Text("Auto Strong Mode: \(dataManager.autoEnableStrongMode)")
+//                                            }
+//                                            Text("")
+//                                                .padding(0)
+//                                        }
                                     } header: {
                                         Text("Strong Mode")
                                     } footer: {
-                                        Text("When you opened the App  \(autoEnableStrongMode) times in Lockdown Mode, the Strong Mode will be activated.")
+                                        Text("Strong Mode makes it hard to continue to the distracting App while the counter is still counting. Strong Mode is automatically active in Lockdown Mode.")
                                     }
                                 }
                             }
@@ -259,25 +249,15 @@ struct ContentView: View {
                 }
             }
         }
-        .onChange(of: strongMode) { old, new in
-            setShortcutChangeImmediately(changeImmediately: new)
+        .onChange(of: dataManager.strongMode) { old, new in
+            dataManager.closeAppImmediately = new
         }
-    }
-    
-    func setShortcutChangeImmediately(changeImmediately: Bool) {
-//        if let sharedDefaults = UserDefaults(suiteName: "group.org.hoeschen.lukas.BeStrongApp") {
-//            sharedDefaults.set(changeImmediately, forKey: "sharedStrongModeOn")
-//            sharedDefaults.synchronize() // Ensure the data is saved immediately
-//            print("strong mode: \(changeImmediately)")
-//        }
-        
-        closeAppImmediately = changeImmediately
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .environmentObject(DataControler())
 }
 
 struct CircularProgressView: View {

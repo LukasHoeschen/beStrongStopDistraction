@@ -1,0 +1,15 @@
+{
+  "originHash" : "141fbba67fc9a44af5c9071bb09f878098a483cb7ee904767285c77f3b23e9aa",
+  "pins" : [
+    {
+      "identity" : "swiftdate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/malcommac/SwiftDate/",
+      "state" : {
+        "revision" : "5d943224c3bb173e6ecf27295611615eba90c80e",
+        "version" : "7.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

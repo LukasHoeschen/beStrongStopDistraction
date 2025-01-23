@@ -11,41 +11,23 @@ import SwiftUI
 
 struct whenToClose: AppIntent {
     
-    @AppStorage("AppOpenedThisDate") var appOpenedThisDate: Int = 0
-    @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
+//    @AppStorage("AppOpenedThisDate") var appOpenedThisDate: Int = 0
+//    @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
+//    
+//    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 30
+//    
+//    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
+//    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
     
-    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 30
     
-    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
-    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
+    @ObservedObject var dataManager: DataControler = DataControler()
     
     
     static var title = LocalizedStringResource("Stop Distraction in")
     static var description = IntentDescription("Returns a Value when the distracting App should be closed.")
     
     func perform() async throws -> some ReturnsValue<Int> {
-        
-        if closeAppImmediately {
-            return .result(value: 0)
-        }
-        
-        // check if actual time i in between extended mode
-        if extendedModeStart.time > extendedModeEnd.time {
-            if extendedModeStart.time < Date().time {
-                appOpenedThisDate += 1
-                return .result(value: Int(changeAppAfterSeconds))
-            } else if extendedModeEnd.time < Date().time {
-                appOpenedThisDate += 1
-                return .result(value: Int(changeAppAfterSeconds))
-            }
-        } else {
-            if extendedModeStart.time < Date().time && extendedModeEnd.time > Date().time {
-                appOpenedThisDate += 1
-                return .result(value: Int(changeAppAfterSeconds))
-            }
-        }
-
-        return .result(value: 300)
+        return .result(value: dataManager.distractingAppWasOpened())
     }
 }
 

@@ -16,6 +16,8 @@ struct SetUpView: View {
     
     @AppStorage("showAppSetup") var showAppSetup = true
     
+    
+    
     var body: some View {
         NavigationStack {
             ScrollView {
