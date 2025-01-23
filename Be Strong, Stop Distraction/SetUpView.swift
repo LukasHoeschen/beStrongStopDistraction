@@ -288,6 +288,10 @@ struct SetUpView: View {
                                                                                         .fontWeight(.semibold)
                                                                                         .font(.body)
                                                                                         .foregroundStyle(Color.primary)
+                                                                                    
+                                                                                    NavigationLink("Step-By-Step-Example") {
+                                                                                        SetUpDetailView()
+                                                                                    }
                                                                                 }
                                                                                 .padding(.horizontal)
                                                                                 
@@ -416,6 +420,71 @@ struct SetUpView: View {
     }
 }
 
+
+
+struct SetUpDetailView: View {
+    var body: some View {
+        VStack {
+            TabView {
+                Image("Setup 1")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+                
+                Image("Setup 3")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+                
+                Image("Setup 4")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+            
+                Image("Setup 5")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+                
+                Image("Setup 6")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+            
+                Image("Setup 7")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+                
+                Image("Setup 8")
+                    .resizable()
+                    .scaledToFit()
+                    .border(Color.gray, width: 3)
+                
+                VStack {
+                    Spacer()
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(Color.green)
+                        .font(.system(size: 50))
+                    
+                    Text("All done!")
+                    Spacer()
+                }
+                    
+                
+            }.tabViewStyle(.page)
+                .padding()
+            
+            Text("Swipe left for next Step")
+        }.navigationTitle("Step by Step Instruction")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+
+
+
 #Preview {
+//    SetUpDetailView()
     SetUpView()
 }

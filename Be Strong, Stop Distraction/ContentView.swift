@@ -13,13 +13,12 @@ struct ContentView: View {
     @Environment(\.scenePhase) var scenePhase
     
     @AppStorage("timerTime") var timerTime = 30
-    @State var counter = 30
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State var runTimer = true
     @AppStorage("userName") var name = ""
     @State var timerTimeString = "30"
-    @AppStorage("showSettings") var showSettings: Bool = true
+    @State var showSettings: Bool = false
     @State var counterFinished = false
     
     @State var randomForMessage: Int = 0
@@ -70,7 +69,7 @@ struct ContentView: View {
                                     counterFinished = false
                                     runTimer = false
                                 } else if newPhase == .active {
-                                    randomForMessage = Int.random(in: 0..<10)
+                                    randomForMessage = Int.random(in: 0..<11)
                                     if strongMode {
                                         setShortcutChangeImmediately(changeImmediately: true)
                                     }
@@ -97,13 +96,28 @@ struct ContentView: View {
                 VStack {
                     if !counterFinished {
                         VStack {
-                            
                             // random show some other supporting messages
                             switch randomForMessage {
                             case 0:
-                                Text("\(name), you can do it!")
+                                Text("\(name), you've got this!")
                             case 1:
-                                Text("some text")
+                                Text("Stay focused, \(name)!")
+                            case 2:
+                                Text("One step at a time, \(name)!")
+                            case 3:
+                                Text("Keep going, \(name), you're doing great!")
+                            case 4:
+                                Text("\(name), every small step counts!")
+                            case 5:
+                                Text("Believe in yourself, \(name)!")
+                            case 6:
+                                Text("You're stronger than any distraction, \(name)!")
+                            case 7:
+                                Text("Focus on what matters most, \(name)!")
+                            case 8:
+                                Text("You've made it this far, \(name)!")
+                            case 9:
+                                Text("\(name), don't let distractions win!")
                             default:
                                 Text("\(name), be strong, I know you can do this!")
                             }
@@ -191,10 +205,32 @@ struct ContentView: View {
                                     }
                                     
                                     Section {
-                                        Text("Then, in the Shortcuts App, select Automations.")
-                                        Text("Create a new Automation (\"+\"), select when App opened. \nSelect all your distracting Apps (e.g. Instagram, TikTok, ...) and select \"Run Immediately\".")
-                                        Text("Click on \"Next\"\nSelect the downloaded \"Setup\" Shortcut")
-                                        Text("Congrats, your all done!")
+                                        VStack(alignment: .leading, spacing: 16) {
+                                            Text("1. In the Shortcuts App, go to the Automations tab.")
+                                                .font(.body)
+                                                .foregroundColor(.primary)
+//
+                                            Text("2. Create a new Automation by tapping the \"+\" button.")
+                                                .font(.body)
+                                                .foregroundColor(.primary)
+//
+                                            Text("3. Select 'When App is Opened'. Choose all your distracting apps (e.g., Instagram, TikTok, etc.), then select 'Run Immediately'.")
+                                                .font(.body)
+                                                .foregroundColor(.primary)
+//
+                                            Text("4. Tap 'Next' and choose the downloaded 'Setup' Shortcut.")
+                                                .font(.body)
+                                                .foregroundColor(.primary)
+                                            
+                                            Text("5. Congratulations, you're all set! 🎉")
+                                                .fontWeight(.semibold)
+                                                .font(.body)
+                                                .foregroundStyle(Color.primary)
+                                            
+                                            NavigationLink ("Step-By-Step Example") {
+                                                SetUpDetailView()
+                                            }
+                                        }
                                     }
                                 }.navigationTitle("Setup")
                             }
