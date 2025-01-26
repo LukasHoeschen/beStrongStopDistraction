@@ -1,2 +1,0 @@
-# beStrongStopDistraction
-iOS App
