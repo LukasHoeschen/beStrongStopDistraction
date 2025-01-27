@@ -57,7 +57,7 @@ struct SetUpView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 100, height: 100)
-                                        .foregroundColor(.blue)
+                                        .foregroundColor(.accentColor)
                                     
                                     Text("Secure & Private")
                                         .font(.title2)
@@ -70,7 +70,7 @@ struct SetUpView: View {
                                     HStack(spacing: 16) {
                                         Image(systemName: "timer")
                                             .font(.largeTitle)
-                                            .foregroundColor(.blue)
+                                            .foregroundColor(.accentColor)
                                         Text("Timed Breaks")
                                             .font(.headline)
                                             .foregroundColor(.primary)
@@ -79,12 +79,33 @@ struct SetUpView: View {
                                     HStack(spacing: 16) {
                                         Image(systemName: "square.and.arrow.down")
                                             .font(.largeTitle)
-                                            .foregroundColor(.blue)
+                                            .foregroundColor(.accentColor)
                                         Text("Shortcut Integration")
                                             .font(.headline)
                                             .foregroundColor(.primary)
                                     }
+                                    
+                                    HStack(spacing: 16) {
+                                        Image(systemName: "lock.open")
+                                            .font(.largeTitle)
+                                            .foregroundColor(.accentColor)
+                                        
+                                        Text("Open Source")
+                                            .font(.headline)
+                                            .foregroundColor(.primary)
+                                    }
+                                    
+                                    HStack(spacing: 16) {
+                                        Image(systemName: "lock.shield")
+                                            .font(.largeTitle)
+                                            .foregroundColor(.accentColor)
+                                        
+                                        Text("No Data Collected")
+                                            .font(.headline)
+                                            .foregroundColor(.primary)
+                                    }
                                 }
+                                
                                 
                                 Spacer()
                                 
@@ -98,37 +119,36 @@ struct SetUpView: View {
                                                     .resizable()
                                                     .scaledToFit()
                                                     .frame(width: 100, height: 100)
-                                                    .foregroundColor(.blue)
-
+                                                    .foregroundColor(.accentColor)
+                                                
                                                 Text("Personalized Experience")
                                                     .font(.title2)
                                                     .fontWeight(.semibold)
                                                     .foregroundColor(.primary)
                                             }
-
+                                            
                                             // Name Input Field
                                             VStack(alignment: .leading, spacing: 8) {
                                                 Text("Enter your name")
                                                     .font(.headline)
                                                     .foregroundColor(.primary)
-
+                                                
                                                 TextField("Your name", text: $name)
-                                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                                //                                                    .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .padding(.vertical, 5)
                                                     .padding(.horizontal)
                                                     .background(
                                                         RoundedRectangle(cornerRadius: 10)
-                                                            .stroke(Color.blue, lineWidth: 1)
+                                                            .stroke(Color.accentColor, lineWidth: 1)
                                                             .shadow(radius: 2)
                                                     )
                                                     .padding(.horizontal)
                                             }
                                             
                                             // Explanation Text
-                                            HStack {
-                                                VStack {
-                                                    Image(systemName: "info.circle")
-                                                }
+                                            HStack(alignment: .top) {
+                                                Image(systemName: "info.circle")
+                                                
                                                 VStack(alignment: .leading, spacing: 12) {
                                                     Text("""
                                                 Your name helps us create supportive and personalized messages while you wait and stay strong. You can always update this information later in the settings.
@@ -139,256 +159,256 @@ struct SetUpView: View {
                                                 .multilineTextAlignment(.leading)
                                                 .padding(.horizontal)
                                             }
+                                        }
                                             
-                                            Spacer()
+                                        Spacer()
 
-                                            NavigationLink(destination: {
-                                                VStack {
-                                                    VStack(spacing: 30) {
-                                                        // Header with SF Symbol
-                                                        VStack(spacing: 16) {
-                                                            Image(systemName: "lock.shield")
-                                                                .resizable()
-                                                                .scaledToFit()
-                                                                .frame(width: 100, height: 100)
-                                                                .foregroundColor(.blue)
+                                        NavigationLink(destination: {
+                                            VStack {
+                                                VStack(spacing: 30) {
+                                                    // Header with SF Symbol
+                                                    VStack(spacing: 16) {
+                                                        Image(systemName: "lock.shield")
+                                                            .resizable()
+                                                            .scaledToFit()
+                                                            .frame(width: 100, height: 100)
+                                                            .foregroundColor(.accentColor)
 
-                                                            Text("Lockdown Mode Settings")
-                                                                .font(.title2)
-                                                                .fontWeight(.semibold)
-                                                                .foregroundColor(.primary)
+                                                        Text("Lockdown Mode Settings")
+                                                            .font(.title2)
+                                                            .fontWeight(.semibold)
+                                                            .foregroundColor(.primary)
+                                                    }
+
+                                                    // Explanation Section
+                                                    VStack(alignment: .leading, spacing: 12) {
+                                                        Text("What is Lockdown Mode?")
+                                                            .font(.headline)
+                                                            .foregroundColor(.primary)
+
+                                                        Text("""
+                                                        When Lockdown Mode is enabled, the app will strictly restrict access to distracting apps during the specified hours. You can change the allowed time later in Settings.
+                                                        Outside of Lockdown Mode, distracting apps will be closed after 5 minutes of use.
+                                                        """)
+                                                            .font(.callout)
+                                                            .foregroundColor(.secondary)
+                                                    }
+                                                    .multilineTextAlignment(.leading)
+                                                    .padding(.horizontal)
+
+                                                    VStack(alignment: .leading, spacing: 20) {
+                                                        HStack {
+                                                            Image(systemName: "clock.arrow.circlepath")
+                                                                .foregroundColor(.accentColor)
+                                                            DatePicker("Lockdown Mode Start", selection: $extendedModeStart, displayedComponents: .hourAndMinute)
                                                         }
-
-                                                        // Explanation Section
-                                                        VStack(alignment: .leading, spacing: 12) {
-                                                            Text("What is Lockdown Mode?")
-                                                                .font(.headline)
-                                                                .foregroundColor(.primary)
-
-                                                            Text("""
-                                                            When Lockdown Mode is enabled, the app will strictly restrict access to distracting apps during the specified hours. You can change the allowed time later in Settings.
-                                                            Outside of Lockdown Mode, distracting apps will be closed after 5 minutes of use.
-                                                            """)
-                                                                .font(.callout)
-                                                                .foregroundColor(.secondary)
-                                                        }
-                                                        .multilineTextAlignment(.leading)
                                                         .padding(.horizontal)
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
 
-                                                        VStack(alignment: .leading, spacing: 20) {
-                                                            HStack {
-                                                                Image(systemName: "clock.arrow.circlepath")
-                                                                    .foregroundColor(.blue)
-                                                                DatePicker("Lockdown Mode Start", selection: $extendedModeStart, displayedComponents: .hourAndMinute)
-                                                            }
-                                                            .padding(.horizontal)
-                                                            .frame(maxWidth: .infinity, alignment: .leading)
-
-                                                            HStack {
-                                                                Image(systemName: "clock.arrow.2.circlepath")
-                                                                    .foregroundColor(.blue)
-                                                                DatePicker("Lockdown Mode End", selection: $extendedModeEnd, displayedComponents: .hourAndMinute)
-                                                            }
-                                                            .padding(.horizontal)
-                                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                                        HStack {
+                                                            Image(systemName: "clock.arrow.2.circlepath")
+                                                                .foregroundColor(.accentColor)
+                                                            DatePicker("Lockdown Mode End", selection: $extendedModeEnd, displayedComponents: .hourAndMinute)
                                                         }
-                                                        
-                                                        Spacer()
+                                                        .padding(.horizontal)
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                                    }
+                                                    
+                                                    Spacer()
 
-                                                        // Button to Save Settings
-                                                        NavigationLink(destination: {
-                                                            
-                                                            VStack {
-                                                                VStack(spacing: 40) {
-                                                                    // Download Shortcut Option
-                                                                    VStack(spacing: 16) {
-                                                                        Image(systemName: "square.and.arrow.down")
+                                                    // Button to Save Settings
+                                                    NavigationLink(destination: {
+                                                        
+                                                        VStack {
+                                                            VStack(spacing: 40) {
+                                                                // Download Shortcut Option
+                                                                VStack(spacing: 16) {
+                                                                    Image(systemName: "square.and.arrow.down")
+                                                                        .resizable()
+                                                                        .scaledToFit()
+                                                                        .frame(width: 80, height: 80)
+                                                                        .foregroundColor(.accentColor)
+
+                                                                    VStack(spacing: 8) {
+                                                                        Text("Download Shortcut")
+                                                                            .font(.title2)
+                                                                            .fontWeight(.semibold)
+                                                                            .foregroundColor(.primary)
+
+                                                                        Link("Tap here to download", destination: URL(string: "https://www.icloud.com/shortcuts/cca6a6d83d794efabe470ff27ef79e4b")!)
+                                                                            .font(.headline)
+                                                                            .foregroundColor(.accentColor)
+                                                                    }
+                                                                }
+
+                                                                Divider()
+
+                                                                // Manual Build Option
+                                                                VStack(spacing: 16) {
+                                                                    Image(systemName: "wrench.and.screwdriver")
+                                                                        .resizable()
+                                                                        .scaledToFit()
+                                                                        .frame(width: 80, height: 80)
+                                                                        .foregroundColor(.orange)
+
+                                                                    NavigationLink(destination: {
+                                                                        Image("Shortcut")
                                                                             .resizable()
                                                                             .scaledToFit()
-                                                                            .frame(width: 80, height: 80)
-                                                                            .foregroundColor(.blue)
-
+                                                                    }) {
                                                                         VStack(spacing: 8) {
-                                                                            Text("Download Shortcut")
+                                                                            Text("Build Shortcut Manually")
                                                                                 .font(.title2)
                                                                                 .fontWeight(.semibold)
                                                                                 .foregroundColor(.primary)
 
-                                                                            Link("Tap here to download", destination: URL(string: "https://www.icloud.com/shortcuts/cca6a6d83d794efabe470ff27ef79e4b")!)
-                                                                                .font(.headline)
-                                                                                .foregroundColor(.blue)
+                                                                            Text("Follow step-by-step instructions.")
+                                                                                .font(.body)
+                                                                                .foregroundColor(.accentColor)
                                                                         }
                                                                     }
-
-                                                                    Divider()
-
-                                                                    // Manual Build Option
-                                                                    VStack(spacing: 16) {
-                                                                        Image(systemName: "wrench.and.screwdriver")
-                                                                            .resizable()
-                                                                            .scaledToFit()
-                                                                            .frame(width: 80, height: 80)
-                                                                            .foregroundColor(.orange)
-
-                                                                        NavigationLink(destination: {
-                                                                            Image("Shortcut")
-                                                                                .resizable()
-                                                                                .scaledToFit()
-                                                                        }) {
-                                                                            VStack(spacing: 8) {
-                                                                                Text("Build Shortcut Manually")
-                                                                                    .font(.title2)
-                                                                                    .fontWeight(.semibold)
-                                                                                    .foregroundColor(.primary)
-
-                                                                                Text("Follow step-by-step instructions.")
-                                                                                    .font(.body)
-                                                                                    .foregroundColor(.blue)
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    Spacer()
-                                                                    
-                                                                    NavigationLink(destination: {
-                                                                        
-                                                                        VStack {
-                                                                            VStack(spacing: 40) {
-                                                                                // Instructions Header with SF Symbol
-                                                                                VStack(spacing: 16) {
-                                                                                    Image(systemName: "checkmark.circle.fill")
-                                                                                        .resizable()
-                                                                                        .scaledToFit()
-                                                                                        .frame(width: 80, height: 80)
-                                                                                        .foregroundColor(.green)
-
-                                                                                    Text("Complete the Setup in Shortcuts")
-                                                                                        .font(.title2)
-                                                                                        .fontWeight(.semibold)
-                                                                                        .foregroundColor(.primary)
-                                                                                }
-
-                                                                                // Step-by-step Instructions
-                                                                                VStack(alignment: .leading, spacing: 16) {
-                                                                                    Text("1. In the Shortcuts App, go to the Automations tab.")
-                                                                                        .font(.body)
-                                                                                        .foregroundColor(.primary)
-//
-                                                                                    Text("2. Create a new Automation by tapping the \"+\" button.")
-                                                                                        .font(.body)
-                                                                                        .foregroundColor(.primary)
-//
-                                                                                    Text("3. Select 'When App is Opened'. Choose all your distracting apps (e.g., Instagram, TikTok, etc.), then select 'Run Immediately'.")
-                                                                                        .font(.body)
-                                                                                        .foregroundColor(.primary)
-//
-                                                                                    Text("4. Tap 'Next' and choose the downloaded 'Setup' Shortcut.")
-                                                                                        .font(.body)
-                                                                                        .foregroundColor(.primary)
-                                                                                    
-                                                                                    Text("5. Congratulations, you're all set! 🎉")
-                                                                                        .fontWeight(.semibold)
-                                                                                        .font(.body)
-                                                                                        .foregroundStyle(Color.primary)
-                                                                                    
-                                                                                    NavigationLink("Step-By-Step-Example") {
-                                                                                        SetUpDetailView()
-                                                                                    }
-                                                                                }
-                                                                                .padding(.horizontal)
-                                                                                
-                                                                                Spacer()
-
-                                                                                // Button to Finish Setup
-                                                                                Button(action: {
-                                                                                    showAppSetup = false
-                                                                                }) {
-                                                                                    Text("Finish Setup")
-                                                                                        .font(.headline)
-                                                                                        .frame(maxWidth: .infinity)
-                                                                                        .padding()
-                                                                                        .foregroundColor(.white)
-                                                                                        .background(Color.blue)
-                                                                                        .cornerRadius(10)
-                                                                                        .shadow(radius: 4)
-                                                                                }
-                                                                                .padding(.horizontal)
-                                                                            }
-                                                                            .padding()
-                                                                            .frame(maxWidth: .infinity, alignment: .center)
-                                                                        }
-                                                                        .navigationTitle("Finish Setup")
-                                                                        .navigationBarTitleDisplayMode(.inline)
-                                                                        
-                                                                    }) {
-                                                                        Text("Next")
-                                                                            .font(.headline)
-                                                                            .frame(maxWidth: .infinity)
-                                                                            .padding()
-                                                                            .foregroundColor(.white)
-                                                                            .background(Color.blue)
-                                                                            .cornerRadius(10)
-                                                                            .shadow(radius: 4)
-                                                                    }
-                                                                    .padding(.horizontal)
                                                                 }
-                                                                .padding()
-                                                                .frame(maxWidth: .infinity, alignment: .center)
                                                                 
                                                                 Spacer()
                                                                 
-                                                                Text("Step 4/5")
-                                                                    .font(.footnote)
-                                                                    .foregroundStyle(Color.secondary)
+                                                                NavigationLink(destination: {
+                                                                    
+                                                                    VStack {
+                                                                        VStack(spacing: 40) {
+                                                                            // Instructions Header with SF Symbol
+                                                                            VStack(spacing: 16) {
+                                                                                Image(systemName: "checkmark.circle.fill")
+                                                                                    .resizable()
+                                                                                    .scaledToFit()
+                                                                                    .frame(width: 80, height: 80)
+                                                                                    .foregroundColor(.green)
+
+                                                                                Text("Complete the Setup in Shortcuts")
+                                                                                    .font(.title2)
+                                                                                    .fontWeight(.semibold)
+                                                                                    .foregroundColor(.primary)
+                                                                            }
+
+                                                                            // Step-by-step Instructions
+                                                                            VStack(alignment: .leading, spacing: 16) {
+                                                                                Text("1. In the Shortcuts App, go to the Automations tab.")
+                                                                                    .font(.body)
+                                                                                    .foregroundColor(.primary)
+//
+                                                                                Text("2. Create a new Automation by tapping the \"+\" button.")
+                                                                                    .font(.body)
+                                                                                    .foregroundColor(.primary)
+//
+                                                                                Text("3. Select 'When App is Opened'. Choose all your distracting apps (e.g., Instagram, TikTok, etc.), then select 'Run Immediately'.")
+                                                                                    .font(.body)
+                                                                                    .foregroundColor(.primary)
+//
+                                                                                Text("4. Tap 'Next' and choose the downloaded 'Setup' Shortcut.")
+                                                                                    .font(.body)
+                                                                                    .foregroundColor(.primary)
+                                                                                
+                                                                                Text("5. Congratulations, you're all set! 🎉")
+                                                                                    .fontWeight(.semibold)
+                                                                                    .font(.body)
+                                                                                    .foregroundStyle(Color.primary)
+                                                                                
+                                                                                NavigationLink("Step-By-Step-Example") {
+                                                                                    SetUpDetailView()
+                                                                                }
+                                                                            }
+                                                                            .padding(.horizontal)
+                                                                            
+                                                                            Spacer()
+
+                                                                            // Button to Finish Setup
+                                                                            Button(action: {
+                                                                                showAppSetup = false
+                                                                            }) {
+                                                                                Text("Finish Setup")
+                                                                                    .font(.headline)
+                                                                                    .frame(maxWidth: .infinity)
+                                                                                    .padding()
+                                                                                    .foregroundColor(.white)
+                                                                                    .background(Color.accentColor)
+                                                                                    .cornerRadius(10)
+                                                                                    .shadow(radius: 4)
+                                                                            }
+                                                                            .padding(.horizontal)
+                                                                        }
+                                                                        .padding()
+                                                                        .frame(maxWidth: .infinity, alignment: .center)
+                                                                    }
+                                                                    .navigationTitle("Finish Setup")
+                                                                    .navigationBarTitleDisplayMode(.inline)
+                                                                    
+                                                                }) {
+                                                                    Text("Next")
+                                                                        .font(.headline)
+                                                                        .frame(maxWidth: .infinity)
+                                                                        .padding()
+                                                                        .foregroundColor(.white)
+                                                                        .background(Color.accentColor)
+                                                                        .cornerRadius(10)
+                                                                        .shadow(radius: 4)
+                                                                }
+                                                                .padding(.horizontal)
                                                             }
-                                                            .navigationTitle("Shortcut Setup")
-                                                            .navigationBarTitleDisplayMode(.inline)
+                                                            .padding()
+                                                            .frame(maxWidth: .infinity, alignment: .center)
                                                             
-                                                        }) {
-                                                            Text("Next")
-                                                                .font(.headline)
-                                                                .frame(maxWidth: .infinity)
-                                                                .padding()
-                                                                .foregroundColor(.white)
-                                                                .background(Color.blue)
-                                                                .cornerRadius(10)
-                                                                .shadow(radius: 4)
+                                                            Spacer()
+                                                            
+                                                            Text("Step 4/5")
+                                                                .font(.footnote)
+                                                                .foregroundStyle(Color.secondary)
                                                         }
-                                                        .padding(.horizontal)
+                                                        .navigationTitle("Shortcut Setup")
+                                                        .navigationBarTitleDisplayMode(.inline)
+                                                        
+                                                    }) {
+                                                        Text("Next")
+                                                            .font(.headline)
+                                                            .frame(maxWidth: .infinity)
+                                                            .padding()
+                                                            .foregroundColor(.white)
+                                                            .background(Color.accentColor)
+                                                            .cornerRadius(10)
+                                                            .shadow(radius: 4)
                                                     }
-                                                    .padding()
-                                                    .navigationTitle("Lockdown Mode")
-                                                    
-                                                    Text("Step 3/5")
-                                                        .font(.footnote)
-                                                        .foregroundStyle(Color.secondary)
+                                                    .padding(.horizontal)
                                                 }
-                                            }) {
-                                                Text("Next")
-                                                    .font(.headline)
-                                                    .frame(maxWidth: .infinity)
-                                                    .padding()
-                                                    .foregroundColor(.white)
-                                                    .background(Color.blue)
-                                                    .cornerRadius(10)
-                                                    .shadow(radius: 4)
+                                                .padding()
+                                                .navigationTitle("Lockdown Mode")
+                                                
+                                                Text("Step 3/5")
+                                                    .font(.footnote)
+                                                    .foregroundStyle(Color.secondary)
                                             }
-                                            .padding(.top, 16)
-                                            
-                                            Text("Step 2/5")
-                                                .font(.footnote)
-                                                .foregroundStyle(Color.secondary)
+                                        }) {
+                                            Text("Next")
+                                                .font(.headline)
+                                                .frame(maxWidth: .infinity)
+                                                .padding()
+                                                .foregroundColor(.white)
+                                                .background(Color.accentColor)
+                                                .cornerRadius(10)
+                                                .shadow(radius: 4)
                                         }
-                                        .padding()
-                                        .navigationTitle("Enter Your Name")
+                                        .padding(.top, 16)
+                                        
+                                        Text("Step 2/5")
+                                            .font(.footnote)
+                                            .foregroundStyle(Color.secondary)
                                     }
+                                    .padding()
+                                    .navigationTitle("Enter Your Name")
                                 }) {
                                     Text("Next")
                                         .font(.headline)
                                         .frame(maxWidth: .infinity)
                                         .padding()
                                         .foregroundColor(.white)
-                                        .background(Color.blue)
+                                        .background(Color.accentColor)
                                         .cornerRadius(10)
                                         .shadow(radius: 4)
                                 }
@@ -409,7 +429,7 @@ struct SetUpView: View {
                             .frame(maxWidth: .infinity)
                             .padding()
                             .foregroundColor(.white)
-                            .background(Color.blue)
+                            .background(Color.accentColor)
                             .cornerRadius(8)
                             .shadow(radius: 4)
                     }

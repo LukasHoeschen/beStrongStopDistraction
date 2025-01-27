@@ -177,6 +177,7 @@ struct ContentView: View {
                                     }
                                 }
                             }
+                            .foregroundStyle(Color.accentColor)
                         }
                         
                         Section {
@@ -224,6 +225,7 @@ struct ContentView: View {
                                     }
                                 }.navigationTitle("Setup")
                             }
+                            .foregroundStyle(Color.accentColor)
                         }
                         
                         Section("Information") {
@@ -237,6 +239,11 @@ struct ContentView: View {
                         Section("Support Me") {
                             Text("Currently I'm studying Mechatronics and if you like my App, I would be very happy if you could support me by buying me a coffee.")
                             Link("Buy Me A Coffee", destination: URL(string: "https://buymeacoffee.com/hoeschenDevelopment")!)
+                        }
+                        
+                        Section("FAQ") {
+                            NavigationLink("Frequently Asked Questions", destination: FAQView())
+                                .foregroundStyle(Color.accentColor)
                         }
                     }.navigationTitle("Settings")
                         .toolbar {
