@@ -10,7 +10,6 @@ import SwiftUI
 import SwiftDate
 
 
-
 class DataControler: ObservableObject {
     
     @AppStorage("timerTime") var timerTime: Double = 30
@@ -38,6 +37,8 @@ class DataControler: ObservableObject {
     
     @AppStorage("inLockDownMode") var inLockDownMode = false
     
+    @AppStorage("appOpenedCounter") var appOpenedCounter: Int?
+    
     func timerStep() {
         if runTimer {
             if counter > 0 {
@@ -60,6 +61,12 @@ class DataControler: ObservableObject {
                 closeAppImmediately = true
             }
             runTimer = true
+            
+            if appOpenedCounter == nil {
+                appOpenedCounter = 1
+            } else {
+                appOpenedCounter! += 1
+            }
         }
     }
     

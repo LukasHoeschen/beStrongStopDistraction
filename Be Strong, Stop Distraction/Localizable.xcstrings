@@ -1,0 +1,997 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@, be strong, I know you can do this!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, sei stark, ich weiß du schaffst das!"
+          }
+        }
+      }
+    },
+    "%@, don't let distractions win!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, lass Zeitfresser nicht gewinnen!"
+          }
+        }
+      }
+    },
+    "%@, every small step counts!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, lass Zeitfresser nicht gewinnen!"
+          }
+        }
+      }
+    },
+    "%@, you've got this!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, Du schaffst das!"
+          }
+        }
+      }
+    },
+    "🎉" : {
+      "shouldTranslate" : false
+    },
+    "1. In the Shortcuts App, go to the Automations tab." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. In der Kurzbefehle-App, öffne Automationen."
+          }
+        }
+      }
+    },
+    "2. Create a new Automation by tapping the \"+\" button." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. Erstelle eine neue Automation indem Du auf „+“ tippst."
+          }
+        }
+      }
+    },
+    "3. Select 'When App is Opened'. Choose all your distracting apps (e.g., Instagram, TikTok, etc.), then select 'Run Immediately'." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. Wähle „Wenn App geöffnet wird“ aus. Wähle alle Zeitfresser-Apps wie Instagram oder TikTok. Wähle „Sofort ausführen“ aus."
+          }
+        }
+      }
+    },
+    "4. Tap 'Next' and choose the downloaded 'Setup' Shortcut." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. Tippe auf „Weiter“ und wähle den „Setup“ Kurzbefehl aus."
+          }
+        }
+      }
+    },
+    "5. Congratulations, you're all set! 🎉" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. Herzlichen Glückwunsch, das war’s!"
+          }
+        }
+      }
+    },
+    "All done!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles erledigt!"
+          }
+        }
+      }
+    },
+    "Automatically closes distracting apps after a customizable time limit. Starts a timer in the 'Be Strong, Stop Distraction' app, preventing you from reopening the distracting app until the timer finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließt ablenkende Apps automatisch nach einer anpassbaren Zeitbegrenzung. Startet einen Timer in der „Be Strong, Stop Distraction“-App, der verhindert, dass du die ablenkende App wieder öffnest, bis der Timer abgelaufen ist."
+          }
+        }
+      }
+    },
+    "Believe in yourself, %@!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertraue in dich selbst, %@!"
+          }
+        }
+      }
+    },
+    "Build Shortcut Manually" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl selber erstellen"
+          }
+        }
+      }
+    },
+    "Buy Me A Coffee" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaufe mir einen Kaffee"
+          }
+        }
+      }
+    },
+    "Close distracting App in Lockdown Mode after %@ Seconds" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließe Zeitfresser-Apps im Lockdown Modus nach %@ Sekunden"
+          }
+        }
+      }
+    },
+    "Complete the Setup in Shortcuts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließe die Einrichtung in Kurzbefehle ab"
+          }
+        }
+      }
+    },
+    "Congrats, you did it, %@. Please consider if you really want to continue being distracted." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herzlichen Glückwunsch, %@! Wenn du wirklich willst, kannst du jetzt zum Zeitfresser zurückkehren."
+          }
+        }
+      }
+    },
+    "Currently I'm studying Mechatronics and if you like my App, I would be very happy if you could support me by buying me a coffee." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurzeit studiere ich Mechatronik und wenn Dir meine App gefällt, wird es mich sehr freuen, wenn du mich unterstützt und mir einen Kaffee kaufst."
+          }
+        }
+      }
+    },
+    "Download Shortcut" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl herunterladen"
+          }
+        }
+      }
+    },
+    "Enables Strong Mode automatically and keeps it active for a set period." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktiviert den Starken Modus automatisch und hält ihn für einen festgelegten Zeitraum aktiv"
+          }
+        }
+      }
+    },
+    "Enter your name" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib bitte deinen Namen ein"
+          }
+        }
+      }
+    },
+    "Enter Your Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib deinen Namen an"
+          }
+        }
+      }
+    },
+    "Finish Setup" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einrichtung abschließen"
+          }
+        }
+      }
+    },
+    "Focus on what matters most, %@!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fokussiere dich auf die wichtigen Dinge, %@!"
+          }
+        }
+      }
+    },
+    "Follow step-by-step instructions." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt für Schritt Anleitung"
+          }
+        }
+      }
+    },
+    "Frequently Asked Questions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Häufig gestellte Fragen"
+          }
+        }
+      }
+    },
+    "General" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generell"
+          }
+        }
+      }
+    },
+    "Here isn't a timer, because it seams like you didn't opened a distracting App for the last 30 Minutes. Congratulations" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier ist kein Timer, da es so scheint, als hättest Du keinen Zeitfresser in den letzten 30 Minuten geöffnet. Sehr gut."
+          }
+        }
+      }
+    },
+    "Hi there!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo"
+          }
+        }
+      }
+    },
+    "Hi, my name is Lukas. I made this App to help me to close distracting Apps. I hope it helps you too! \nThe App works with together with an Apple Shortcut to detect if a certain App was opened. If you spend to much time on that App, my App will open and the Timer will start. You then need to be strong an stay in my App until the timer is done, and hopefully you won't reopen the distracting App." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo, mein Name ist Lukas. Ich habe diese App entwickelt, um mir zu helfen, ablenkende Apps zu schließen. Ich hoffe, sie hilft dir auch!\nDie App arbeitet zusammen mit einem Apple-Kurzbefehl, um zu erkennen, ob eine bestimmte App geöffnet wurde. Wenn du zu viel Zeit in dieser App verbringst, öffnet sich meine App, und der Timer startet. Dann musst du stark bleiben und in meiner App bleiben, bis der Timer abgelaufen ist – und hoffentlich öffnest du die ablenkende App danach nicht erneut."
+          }
+        }
+      }
+    },
+    "How can I turn off the automation without deleting the app?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie kann ich die automation vorübergehend ausschalten, ohne die App zu löschen?"
+          }
+        }
+      }
+    },
+    "How does Flexible Usage work?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie funktioniert die Normale Nutzung?"
+          }
+        }
+      }
+    },
+    "How does the app work?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wie funktioniert die App?"
+          }
+        }
+      }
+    },
+    "I like your app! How can I support you?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich mag deine App! Wie kann ich dich unterstützen?"
+          }
+        }
+      }
+    },
+    "If you close or leave the app while the timer is running, the timer will restart from the beginning the next time you open the app. This behavior is intentional to discourage bypassing the timer and to ensure a consistent focus on avoiding distractions." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du die App schließt oder verlässt, während der Timer läuft, wird der Timer beim nächsten Öffnen der App wieder von vorne starten. Dieses Verhalten ist beabsichtigt, um das Umgehen des Timers zu verhindern und eine konsequente Fokussierung auf die Vermeidung von Ablenkungen sicherzustellen."
+          }
+        }
+      }
+    },
+    "If you open and then close a distracting app, 'Be Strong, Stop Distraction' will still open. This is because iOS doesn’t allow apps to check whether another app is still running, so this behavior ensures that distractions are minimized effectively." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du eine ablenkende App öffnest und dann schließt, wird „Be Strong, Stop Distraction“ trotzdem geöffnet. Das liegt daran, dass iOS es Apps nicht erlaubt, zu überprüfen, ob eine andere App noch läuft. Dieses Verhalten stellt sicher, dass Ablenkungen effektiv minimiert werden."
+          }
+        }
+      }
+    },
+    "Information" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informationen"
+          }
+        }
+      }
+    },
+    "Is this project affiliated with TikTok or Instagram?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ist dieses Projekt mit TikTok oder Instagram verbunden?"
+          }
+        }
+      }
+    },
+    "Keep going, %@, you're doing great!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch ein bisschen, %@!"
+          }
+        }
+      }
+    },
+    "Lockdown Mode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lockdown Modus"
+          }
+        }
+      }
+    },
+    "Lockdown Mode End" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lockdown Modus endet"
+          }
+        }
+      }
+    },
+    "Lockdown Mode Settings" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lockdown Modus Einstellungen"
+          }
+        }
+      }
+    },
+    "Lockdown Mode Start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lockdown Modus startet"
+          }
+        }
+      }
+    },
+    "My App isn't collecting any data at all of course and all Information you enter such as your Name are stored on your device." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine App sammelt selbstverständlich keine Daten, und alle Informationen, die du eingibst, wie z. B. dein Name, werden ausschließlich auf deinem Gerät gespeichert."
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        }
+      }
+    },
+    "No Data Collected" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammelt keine Daten"
+          }
+        }
+      }
+    },
+    "No, this app is completely independent and not affiliated with any specific platform." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nein, diese App ist völlig unabhängig und nicht mit einer bestimmten Plattform verbunden."
+          }
+        }
+      }
+    },
+    "One step at a time, %@!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, Du schaffst das!"
+          }
+        }
+      }
+    },
+    "Open Source" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Source"
+          }
+        }
+      }
+    },
+    "Open the Shortcuts app, go to the 'Automations' tab, select the automation for your distracting app, and either delete it or toggle off 'Run Immediately'." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne die Shortcuts-App, gehe zum Tab „Automatisierungen“, wähle die Automatisierung für deine ablenkende App aus und lösche sie entweder oder schalte „Sofort ausführen“ aus."
+          }
+        }
+      }
+    },
+    "Or build the Shortcut on your own" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oder erstelle den Kurzbefehl selbst"
+          }
+        }
+      }
+    },
+    "Personalized Experience" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalisiertes Erlebnis"
+          }
+        }
+      }
+    },
+    "Please download this Shortcut." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte lade diesen Kurzbefehl herunter."
+          }
+        }
+      }
+    },
+    "Privacy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privatsphäre"
+          }
+        }
+      }
+    },
+    "Secure & Private" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sicher & Privat"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        }
+      }
+    },
+    "Setup" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einrichtung"
+          }
+        }
+      }
+    },
+    "Shortcut Integration" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehle-Integration"
+          }
+        }
+      }
+    },
+    "Shortcut Setup" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl-Einrichtung"
+          }
+        }
+      }
+    },
+    "Since iOS doesn’t allow apps to detect when specific apps are opened, I implemented a workaround using Apple Shortcuts. Users set up an automation to run a shortcut whenever a specific app is opened. The app communicates with the shortcut to determine how long the distracting app should remain open before switching back to 'Be Strong, Stop Distraction.' This ensures high security and full control for the user." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Da iOS es Apps nicht erlaubt, zu erkennen, wann bestimmte Apps geöffnet werden, habe ich eine Umgehungslösung mit Apple Kurzbefehlen implementiert. Benutzer richten eine Automatisierung ein, die einen Kurzbefehl ausführt, wann immer eine bestimmte App geöffnet wird. Die App kommuniziert mit dem Kurzbefehl, um zu bestimmen, wie lange die ablenkende App geöffnet bleiben soll, bevor sie wieder zu ‘Be Strong, Stop Distraction’ wechselt. Dies gewährleistet hohe Sicherheit und vollständige Kontrolle für den Benutzer."
+          }
+        }
+      }
+    },
+    "Start Setup" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einrichtung starten"
+          }
+        }
+      }
+    },
+    "Stay focused, %@!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bleibe fokussiert, &@!"
+          }
+        }
+      }
+    },
+    "Step 1/5" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 1/5"
+          }
+        }
+      }
+    },
+    "Step 2/5" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 2/5"
+          }
+        }
+      }
+    },
+    "Step 3/5" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt /35"
+          }
+        }
+      }
+    },
+    "Step 4/5" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 4/5"
+          }
+        }
+      }
+    },
+    "Step-By-Step Example" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt für Schritt Anleitung"
+          }
+        }
+      }
+    },
+    "Step-By-Step-Example" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt für Schritt Anleitung"
+          }
+        }
+      }
+    },
+    "Strong Mode" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starker Modus"
+          }
+        }
+      }
+    },
+    "Strong Mode makes it hard to continue to the distracting App while the counter is still counting. Strong Mode is automatically active in Lockdown Mode." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Starke Modus erschwert es, die ablenkende App weiterhin zu nutzen, während der Timer noch läuft. Im Lockdown Modus ist der Starke Modus automatisch aktiviert."
+          }
+        }
+      }
+    },
+    "Summary" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersicht"
+          }
+        }
+      }
+    },
+    "Support Me" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unterstütze mich"
+          }
+        }
+      }
+    },
+    "Swipe left for next Step" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wische nach links für den nächsten Schritt"
+          }
+        }
+      }
+    },
+    "Tap here to download" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier herunterladen"
+          }
+        }
+      }
+    },
+    "Thank you for choosing my app! It’s designed to help you stay focused by detecting when you spend too much time in distracting apps. If that happens, it gently intervenes by closing the app and asking you to take a short break before returning." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danke, dass du meine App gewählt hast! Sie wurde entwickelt, um dir zu helfen, fokussiert zu bleiben, indem sie erkennt, wenn du zu viel Zeit in ablenkenden Apps verbringst. In diesem Fall greift sie sanft ein, indem sie die App schließt und dich auffordert, eine kurze Pause einzulegen, bevor du zurückkehren kannst."
+          }
+        }
+      }
+    },
+    "Thank you for your trust and support — Lukas" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danke für dein Vertrauen und Deine Unterstützung — Lukas"
+          }
+        }
+      }
+    },
+    "The app is open-source, and you can find the complete source code here:" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die App ist Open Source, und du kannst den vollständigen Quellcode hier finden:"
+          }
+        }
+      }
+    },
+    "Timed Breaks" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geplante Pausen"
+          }
+        }
+      }
+    },
+    "Timer Duration %@ Seconds" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer Dauer: %@ Sekunden"
+          }
+        }
+      }
+    },
+    "To make this work seamlessly, the app relies on Apple’s Shortcuts Automation. You’ll need to download and install a Shortcut for this feature to function. Don’t worry, it’s easy to set up, completely secure, and I don’t collect any of your personal data. Your privacy is my priority!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damit alles nahtlos funktioniert, nutzt die App die Automatisierung von Apples Kurzbefehlen. Du musst einen Kurzbefehl herunterladen und installieren, damit diese Funktion verwendet werden kann. Keine Sorge, die Einrichtung ist einfach, vollkommen sicher, und ich sammelt keinerlei persönliche Daten. Deine Privatsphäre hat höchste Priorität!"
+          }
+        }
+      }
+    },
+    "What happens if I close the app while the timer is running?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was passiert, wenn ich die App schließe, während der Timer läuft?"
+          }
+        }
+      }
+    },
+    "What is Lockdown Mode?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was ist der Lockdown Modus?"
+          }
+        }
+      }
+    },
+    "What is Strong Mode?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was ist der Strong Mode?"
+          }
+        }
+      }
+    },
+    "When Lockdown Mode is enabled, the app will strictly restrict access to distracting apps during the specified hours. You can change the allowed time later in Settings.\nOutside of Lockdown Mode, distracting apps will be closed after 5 minutes of use." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn der Lockdown Modus aktiviert ist, wird der Zugriff auf ablenkende Apps während der festgelegten Stunden strikt eingeschränkt. Du kannst die erlaubte Zeit später in den Einstellungen ändern.\nAußerhalb des Lockdown-Modus werden ablenkende Apps nach 5 Minuten Nutzung geschlossen."
+          }
+        }
+      }
+    },
+    "When not in Lockdown Mode, distracting Apps get closed after 5 Minutes" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn der Lockdown Modus aus ist, werden Zeitfresser-Apps nach 5 Minuten geschlossen"
+          }
+        }
+      }
+    },
+    "When Strong Mode is off, distracting apps close after 5 minutes but can be reopened immediately without restrictions." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn der Strong Mode deaktiviert ist, werden ablenkende Apps nach 5 Minuten geschlossen, können aber sofort wieder ohne Einschränkungen geöffnet werden."
+          }
+        }
+      }
+    },
+    "Where can I find the source code?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wo kann ich den Quellcode finden?"
+          }
+        }
+      }
+    },
+    "Why does the app open sometimes after I close the distracting app?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warum öffnet sich die App manchmal, nachdem ich die ablenkende App geschlossen habe?"
+          }
+        }
+      }
+    },
+    "You can buy me a coffee here:" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kannst mir hier einen Kaffee kaufen:"
+          }
+        }
+      }
+    },
+    "You're stronger than any distraction, %@!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du bist stärker als die Zeitfresser, %@!"
+          }
+        }
+      }
+    },
+    "You've made it this far, %@!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, lass Zeitfresser nicht gewinnen!"
+          }
+        }
+      }
+    },
+    "Your name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Name"
+          }
+        }
+      }
+    },
+    "Your name helps us create supportive and personalized messages while you wait and stay strong. You can always update this information later in the settings." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit deinem Namen erstellen wir unterstützende Nachrichten während du wartest. Du kannst ihn später in den Einstellungen ändern."
+          }
+        }
+      }
+    },
+    "Your Name:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Name:"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

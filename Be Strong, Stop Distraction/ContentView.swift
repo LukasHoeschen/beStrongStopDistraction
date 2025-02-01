@@ -7,34 +7,16 @@
 
 import SwiftUI
 import SwiftData
+import StoreKit
 
 struct ContentView: View {
     
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.requestReview) var requestReview
     
-//    @AppStorage("timerTime") var timerTime = 30
-//    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-//    
-//    @State var runTimer = true
-//    @AppStorage("userName") var name = ""
-//    @State var timerTimeString = "30"
     @State var showSettings: Bool = false
-//    @State var counterFinished = false
-//    
+
     @State var randomForMessage: Int = 0
-//    
-//    @AppStorage("strongModeEnabled") var strongMode = false
-//    @AppStorage("AutoEnableStrongModeAfterTimes") var autoEnableStrongMode = 5
-//    @AppStorage("LastDayStrongModeCount") var lastDayStrongModeCount: Date = .now
-//    @AppStorage("AppOpenedThisDate") var appOpenedThisDay: Int = 0
-//    @AppStorage("closeAppImmediately") var closeAppImmediately: Bool = false
-//    
-//    
-//    @AppStorage("extendedModeStart") var extendedModeStart: Date = Date()
-//    @AppStorage("extendedModeEnd") var extendedModeEnd: Date = Date()
-//    @AppStorage("changeAppAfterSeconds") var changeAppAfterSeconds: Double = 120
-//    
-//    @AppStorage("showAppSetup") var showAppSetup = true
     
     @StateObject var dataManager: DataControler = DataControler()
 
@@ -53,9 +35,6 @@ struct ContentView: View {
                             
                             Text("\(dataManager.counter)")
                                 .font(.system(size: 72, weight: .bold, design: .default))
-                            //                            .onAppear() {
-                            //                                dataManager.counter = dataManager.timerTime
-                            //                            }
                                 .onReceive(dataManager.timer) { input in
                                     dataManager.timerStep()
                                 }
@@ -98,6 +77,8 @@ struct ContentView: View {
                                 default:
                                     Text("\(dataManager.name), be strong, I know you can do this!")
                                 }
+                            }.onAppear {
+                                randomForMessage = Int.random(in: 1...10)
                             }
                         } else {
                             Text("Congrats, you did it, \(dataManager.name). Please consider if you really want to continue being distracted.")
@@ -258,6 +239,14 @@ struct ContentView: View {
         }
         .onChange(of: dataManager.strongMode) { old, new in
             dataManager.closeAppImmediately = new
+        }
+        .onChange(of: dataManager.appOpenedCounter) {
+            if let counter = dataManager.appOpenedCounter {
+                if counter % 500 == 70 {
+                    requestReview()
+                }
+            }
+            
         }
     }
 }
