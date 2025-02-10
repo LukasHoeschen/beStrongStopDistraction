@@ -54,52 +54,12 @@
     "🎉" : {
       "shouldTranslate" : false
     },
-    "1. In the Shortcuts App, go to the Automations tab." : {
+    "Add a new Automation" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "1. In der Kurzbefehle-App, öffne Automationen."
-          }
-        }
-      }
-    },
-    "2. Create a new Automation by tapping the \"+\" button." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2. Erstelle eine neue Automation indem Du auf „+“ tippst."
-          }
-        }
-      }
-    },
-    "3. Select 'When App is Opened'. Choose all your distracting apps (e.g., Instagram, TikTok, etc.), then select 'Run Immediately'." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "3. Wähle „Wenn App geöffnet wird“ aus. Wähle alle Zeitfresser-Apps wie Instagram oder TikTok. Wähle „Sofort ausführen“ aus."
-          }
-        }
-      }
-    },
-    "4. Tap 'Next' and choose the downloaded 'Setup' Shortcut." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "4. Tippe auf „Weiter“ und wähle den „Setup“ Kurzbefehl aus."
-          }
-        }
-      }
-    },
-    "5. Congratulations, you're all set! 🎉" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "5. Herzlichen Glückwunsch, das war’s!"
+            "value" : "Füge eine neue Automation hinzu"
           }
         }
       }
@@ -135,12 +95,13 @@
         }
       }
     },
-    "Build Shortcut Manually" : {
+    "Buy Me a Coffee" : {
+      "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kurzbefehl selber erstellen"
+            "value" : "Kaufe mir einen Kaffee"
           }
         }
       }
@@ -156,22 +117,33 @@
         }
       }
     },
-    "Close distracting App in Lockdown Mode after %@ Seconds" : {
+    "Click \"Next\"" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schließe Zeitfresser-Apps im Lockdown Modus nach %@ Sekunden"
+            "value" : "Tippe auf „Weiter“"
           }
         }
       }
     },
-    "Complete the Setup in Shortcuts" : {
+    "Click on Automations" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schließe die Einrichtung in Kurzbefehle ab"
+            "value" : "Tippe auf „Automationen“"
+          }
+        }
+      }
+    },
+    "Close distracting App in Lockdown Mode after %d Seconds" : {
+      "comment" : "Displayed when showing  something i dont care",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließe Zeitfresser-Apps im Lockdown Modus nach %d Sekunden"
           }
         }
       }
@@ -186,12 +158,13 @@
         }
       }
     },
-    "Currently I'm studying Mechatronics and if you like my App, I would be very happy if you could support me by buying me a coffee." : {
+    "Contact Me" : {
+      "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zurzeit studiere ich Mechatronik und wenn Dir meine App gefällt, wird es mich sehr freuen, wenn du mich unterstützt und mir einen Kaffee kaufst."
+            "value" : "Kontaktiere mich"
           }
         }
       }
@@ -238,6 +211,16 @@
         }
       }
     },
+    "Even dough you probably closed the distracting App, it's quite likely that \"Be Strong, Stop Distraction\" will be opened soon. This is because I cannot detect whether the app is still running. See the FAQ in Settings for more information." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auch wenn du die Zeitfresser-App gerade geschlossen hast, kann es sein, dass „Be Strong, Stop Distraction“ bald geöffnet wird. Dies liegt daran, dass ich nicht erkennen kann, ob eine andere App immer noch geöffnet ist, wenn die Zeit abläuft. In den FAQ findest Du mehr dazu."
+          }
+        }
+      }
+    },
     "Finish Setup" : {
       "localizations" : {
         "de" : {
@@ -254,16 +237,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fokussiere dich auf die wichtigen Dinge, %@!"
-          }
-        }
-      }
-    },
-    "Follow step-by-step instructions." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schritt für Schritt Anleitung"
           }
         }
       }
@@ -364,6 +337,27 @@
         }
       }
     },
+    "I'm a Mechatronics student developing this app in my free time. If you like it, I'd really appreciate your support and I would love to hear your Feedback!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich bin Mechatronik-Student und entwickle diese App in meiner Freizeit. Wenn sie dir gefällt, würde ich mich sehr über deine Unterstützung und dein Feedback freuen!"
+          }
+        }
+      }
+    },
+    "I'm a Mechatronics student developing this app in my free time. If you like it, I'd really appreciate your support!" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich studiere zur Zeit Mechatronik und habe diese App in meiner „Freizeit“ programmiert. Wenn sie Dir gefällt, werde ich mich sehr über deine Unterstützung und dein Feedback freuen!"
+          }
+        }
+      }
+    },
     "If you close or leave the app while the timer is running, the timer will restart from the beginning the next time you open the app. This behavior is intentional to discourage bypassing the timer and to ensure a consistent focus on avoiding distractions." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -417,6 +411,9 @@
           }
         }
       }
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "Lockdown Mode" : {
       "extractionState" : "manual",
@@ -481,6 +478,16 @@
         }
       }
     },
+    "Next, open the Shortcuts App" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als nächstes öffne bitte die Kurzbefehle-App"
+          }
+        }
+      }
+    },
     "No Data Collected" : {
       "localizations" : {
         "de" : {
@@ -498,6 +505,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nein, diese App ist völlig unabhängig und nicht mit einer bestimmten Plattform verbunden."
+          }
+        }
+      }
+    },
+    "Now open one of the Distracting Apps. You should see following Dialog, please click \"Allow\"" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne nun eine der Zeitfresser-Apps. Du solltest folgenden Dialog sehen. Tippe bitte auf „Erlauben“"
+          }
+        }
+      }
+    },
+    "Now select all distracting Apps you want to limit. Make also sure to select \"Run immediately\"." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle nun alle Zeitfresser-Apps die Du limitieren willst. Wähle auch „Sofort ausführen“ aus."
           }
         }
       }
@@ -554,12 +581,22 @@
         }
       }
     },
-    "Please download this Shortcut." : {
+    "Please follow these Steps to make the App work with Apple's Shortcuts." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bitte lade diesen Kurzbefehl herunter."
+            "value" : "Bitte folge diesen Schritten um die App mit Apple’s Kurzbefehlen zu verbinden."
+          }
+        }
+      }
+    },
+    "Please load this Shortcut and click on \"Add Shortcut\"" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte lade diesen Kurzbefehl und tippe auf „Kurzbefehl hinzufügen“"
           }
         }
       }
@@ -581,6 +618,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sicher & Privat"
+          }
+        }
+      }
+    },
+    "Select \"Setup\"" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle „Setup“ aus"
           }
         }
       }
@@ -659,42 +706,113 @@
         }
       }
     },
-    "Step 1/5" : {
+    "Step 1/10" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schritt 1/5"
+            "value" : "Schritt 1/10"
           }
         }
       }
     },
-    "Step 2/5" : {
+    "Step 2/10" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schritt 2/5"
+            "value" : "Schritt 2/10"
           }
         }
       }
     },
-    "Step 3/5" : {
+    "Step 3/10" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schritt /35"
+            "value" : "Schritt 3/10"
           }
         }
       }
     },
-    "Step 4/5" : {
+    "Step 4/10" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schritt 4/5"
+            "value" : "Schritt 4/10"
+          }
+        }
+      }
+    },
+    "Step 5/10" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 5/10"
+          }
+        }
+      }
+    },
+    "Step 6/10" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 6/10"
+          }
+        }
+      }
+    },
+    "Step 7/10" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 7/10"
+          }
+        }
+      }
+    },
+    "Step 8/10" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 8/10"
+          }
+        }
+      }
+    },
+    "Step 9/10" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 9/10"
+          }
+        }
+      }
+    },
+    "Step 10/10" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 10/10"
+          }
+        }
+      }
+    },
+    "Step by Step Instruction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt für Schritt Anleitung"
           }
         }
       }
@@ -763,12 +881,22 @@
         }
       }
     },
-    "Swipe left for next Step" : {
+    "Swipe down to search for \"App\" and select it" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wische nach links für den nächsten Schritt"
+            "value" : "Wische runter um nach „App“ zu suchen"
+          }
+        }
+      }
+    },
+    "Swipe left or right to navigate between Steps." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wische nach links oder rechts um zwischen den Schritten zu navigieren."
           }
         }
       }
@@ -826,11 +954,34 @@
       }
     },
     "Timer Duration %@ Seconds" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer Dauer: %@ Sekunden"
+          }
+        }
+      }
+    },
+    "Timer Duration %d Seconds" : {
+      "comment" : "Displayed when showing timer duration",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer Dauer: %d Sekunden"
+          }
+        }
+      }
+    },
+    "Timer time %@ Seconds" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ss"
           }
         }
       }

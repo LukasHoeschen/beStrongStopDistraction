@@ -123,7 +123,7 @@ struct ContentView: View {
                                             DatePicker("Lockdown Mode End", selection: $dataManager.extendedModeEnd, displayedComponents: .hourAndMinute)
                                         }
                                         VStack(alignment: .leading) {
-                                            Text("Timer Duration \(Int(dataManager.timerTime)) Seconds")
+                                            Text(String(format: NSLocalizedString("Timer Duration %d Seconds", comment: "Displayed when showing timer duration"), Int(dataManager.timerTime)))
 //                                            TextField("Timer Duration", value: $dataManager.timerTime, format: .number)
 //#if !os(macOS)
 //                                                .keyboardType(.decimalPad)
@@ -131,7 +131,7 @@ struct ContentView: View {
                                             Slider(value: $dataManager.timerTime, in: 10...150, step: 10)
                                         }
                                         VStack(alignment: .leading) {
-                                            Text("Close distracting App in Lockdown Mode after \(Int(dataManager.changeAppAfterSeconds)) Seconds")
+                                            Text(String(format: NSLocalizedString("Close distracting App in Lockdown Mode after %d Seconds", comment: "Displayed when showing  something i dont care"), Int(dataManager.changeAppAfterSeconds)))
                                             Slider(value: $dataManager.changeAppAfterSeconds, in: 15...300, step: 15)
                                         }
                                     } header: {
@@ -163,48 +163,7 @@ struct ContentView: View {
                         
                         Section {
                             NavigationLink("Setup") {
-                                Form {
-                                    Section {
-                                        VStack(alignment: .leading) {
-                                            Text("Please download this Shortcut.")
-                                            Link("https://www.icloud.com/shortcuts/cca6a6d83d794efabe470ff27ef79e4b", destination: URL(string: "https://www.icloud.com/shortcuts/cca6a6d83d794efabe470ff27ef79e4b")!)
-                                        }
-                                        NavigationLink("Or build the Shortcut on your own") {
-                                            Image("Shortcut")
-                                                .resizable()
-                                                .scaledToFit()
-                                        }
-                                    }
-                                    
-                                    Section {
-                                        VStack(alignment: .leading, spacing: 16) {
-                                            Text("1. In the Shortcuts App, go to the Automations tab.")
-                                                .font(.body)
-                                                .foregroundColor(.primary)
-//
-                                            Text("2. Create a new Automation by tapping the \"+\" button.")
-                                                .font(.body)
-                                                .foregroundColor(.primary)
-//
-                                            Text("3. Select 'When App is Opened'. Choose all your distracting apps (e.g., Instagram, TikTok, etc.), then select 'Run Immediately'.")
-                                                .font(.body)
-                                                .foregroundColor(.primary)
-//
-                                            Text("4. Tap 'Next' and choose the downloaded 'Setup' Shortcut.")
-                                                .font(.body)
-                                                .foregroundColor(.primary)
-                                            
-                                            Text("5. Congratulations, you're all set! 🎉")
-                                                .fontWeight(.semibold)
-                                                .font(.body)
-                                                .foregroundStyle(Color.primary)
-                                            
-                                            NavigationLink ("Step-By-Step Example") {
-                                                SetUpDetailView()
-                                            }
-                                        }
-                                    }
-                                }.navigationTitle("Setup")
+                                SetUPInstructions()
                             }
                             .foregroundStyle(Color.accentColor)
                         }
@@ -218,8 +177,9 @@ struct ContentView: View {
                         }
                         
                         Section("Support Me") {
-                            Text("Currently I'm studying Mechatronics and if you like my App, I would be very happy if you could support me by buying me a coffee.")
-                            Link("Buy Me A Coffee", destination: URL(string: "https://buymeacoffee.com/hoeschenDevelopment")!)
+                            Text("I'm a Mechatronics student developing this app in my free time. If you like it, I'd really appreciate your support and I would love to hear your Feedback!")
+                            Link("Buy Me a Coffee", destination: URL(string: "https://buymeacoffee.com/hoeschenDevelopment")!)
+                            Link("Contact Me", destination: URL(string: "mailto:development@hoeschen.org")!)
                         }
                         
                         Section("FAQ") {
