@@ -67,6 +67,8 @@ class DataControler: ObservableObject {
             } else {
                 appOpenedCounter! += 1
             }
+        } else {
+            runTimer = false
         }
     }
     

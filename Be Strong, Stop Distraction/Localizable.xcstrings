@@ -74,6 +74,16 @@
         }
       }
     },
+    "As a student, I don’t earn much, and keeping apps available on the App Store comes with costs. If you enjoy using \"Be Strong, Stop Distraction\", I’d really appreciate your support!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Student verdiene ich nicht viel, und die Apps im App Store verfügbar zu halten, kostet Geld. Wenn dir „Be Strong, Stop Distraction“ gefällt, würde ich mich sehr über deine Unterstützung freuen!"
+          }
+        }
+      }
+    },
     "Automatically closes distracting apps after a customizable time limit. Starts a timer in the 'Be Strong, Stop Distraction' app, preventing you from reopening the distracting app until the timer finishes." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -165,6 +175,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kontaktiere mich"
+          }
+        }
+      }
+    },
+    "Donate via [buyMeACoffee.com](https://buymeacoffee.com/hoeschenDevelopment)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spende über [buyMeACoffee.com](https://buymeacoffee.com/hoeschenDevelopment)"
+          }
+        }
+      }
+    },
+    "Donate via [PayPal](https://paypal.me/hoeschenDevelopment)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spende über [PayPal](https://paypal.me/hoeschenDevelopment)"
           }
         }
       }
@@ -284,6 +314,7 @@
       }
     },
     "Hi, my name is Lukas. I made this App to help me to close distracting Apps. I hope it helps you too! \nThe App works with together with an Apple Shortcut to detect if a certain App was opened. If you spend to much time on that App, my App will open and the Timer will start. You then need to be strong an stay in my App until the timer is done, and hopefully you won't reopen the distracting App." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -413,7 +444,15 @@
       }
     },
     "Key" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schlüssel"
+          }
+        }
+      }
     },
     "Lockdown Mode" : {
       "extractionState" : "manual",
