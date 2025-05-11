@@ -11,7 +11,21 @@
         }
       }
     },
+    "%@ is in a timeout right know. You can use it again in %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is in a timeout right know. You can use it again in %2$@."
+          }
+        }
+      }
+    },
+    "%@ Usage:" : {
+
+    },
     "%@, be strong, I know you can do this!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -22,6 +36,7 @@
       }
     },
     "%@, don't let distractions win!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -32,6 +47,7 @@
       }
     },
     "%@, every small step counts!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -42,6 +58,7 @@
       }
     },
     "%@, you've got this!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -51,8 +68,15 @@
         }
       }
     },
-    "🎉" : {
-      "shouldTranslate" : false
+    "%@/%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@/%2$@"
+          }
+        }
+      }
     },
     "Add a new Automation" : {
       "localizations" : {
@@ -64,6 +88,9 @@
         }
       }
     },
+    "After using %@ for five Minutes, you need to make a timeout for at least 60 Minutes." : {
+
+    },
     "All done!" : {
       "localizations" : {
         "de" : {
@@ -74,7 +101,14 @@
         }
       }
     },
+    "Allowed App Time:" : {
+
+    },
+    "Allowed Time in App:" : {
+
+    },
     "As a student, I don’t earn much, and keeping apps available on the App Store comes with costs. If you enjoy using \"Be Strong, Stop Distraction\", I’d really appreciate your support!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -96,6 +130,7 @@
       }
     },
     "Believe in yourself, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -126,6 +161,9 @@
           }
         }
       }
+    },
+    "Can't open %@" : {
+
     },
     "Click \"Next\"" : {
       "localizations" : {
@@ -159,6 +197,7 @@
       }
     },
     "Congrats, you did it, %@. Please consider if you really want to continue being distracted." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -179,7 +218,14 @@
         }
       }
     },
+    "Continue to %@:" : {
+
+    },
+    "Current Timeout:" : {
+
+    },
     "Donate via [buyMeACoffee.com](https://buymeacoffee.com/hoeschenDevelopment)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -190,6 +236,7 @@
       }
     },
     "Donate via [PayPal](https://paypal.me/hoeschenDevelopment)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -208,6 +255,12 @@
           }
         }
       }
+    },
+    "Duration:" : {
+
+    },
+    "Edit" : {
+
     },
     "Enables Strong Mode automatically and keeps it active for a set period." : {
       "extractionState" : "manual",
@@ -262,6 +315,7 @@
       }
     },
     "Focus on what matters most, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -283,6 +337,7 @@
       }
     },
     "General" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -293,6 +348,7 @@
       }
     },
     "Here isn't a timer, because it seams like you didn't opened a distracting App for the last 30 Minutes. Congratulations" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -369,6 +425,7 @@
       }
     },
     "I'm a Mechatronics student developing this app in my free time. If you like it, I'd really appreciate your support and I would love to hear your Feedback!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -434,6 +491,7 @@
       }
     },
     "Keep going, %@, you're doing great!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -497,7 +555,14 @@
         }
       }
     },
+    "Mode:" : {
+
+    },
+    "Mode: %@" : {
+
+    },
     "My App isn't collecting any data at all of course and all Information you enter such as your Name are stored on your device." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -569,6 +634,7 @@
       }
     },
     "One step at a time, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -577,6 +643,9 @@
           }
         }
       }
+    },
+    "Open a distracting App to add it!" : {
+
     },
     "Open Source" : {
       "localizations" : {
@@ -598,6 +667,9 @@
           }
         }
       }
+    },
+    "Opened Today:" : {
+
     },
     "Or build the Shortcut on your own" : {
       "extractionState" : "manual",
@@ -640,6 +712,12 @@
         }
       }
     },
+    "Please open %@ manually to continue to it." : {
+
+    },
+    "Please wait until you can continue to %@." : {
+
+    },
     "Privacy" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -671,6 +749,15 @@
         }
       }
     },
+    "Session" : {
+
+    },
+    "Session Duration:" : {
+
+    },
+    "Sessions per Day:" : {
+
+    },
     "Settings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -692,6 +779,9 @@
           }
         }
       }
+    },
+    "Short Break" : {
+
     },
     "Shortcut Integration" : {
       "localizations" : {
@@ -725,6 +815,12 @@
         }
       }
     },
+    "Sorry, an error occurred" : {
+
+    },
+    "Sorry, an Error occurred" : {
+
+    },
     "Start Setup" : {
       "localizations" : {
         "de" : {
@@ -736,6 +832,7 @@
       }
     },
     "Stay focused, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -878,7 +975,11 @@
         }
       }
     },
+    "Stop Distraction" : {
+
+    },
     "Strong Mode" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -889,6 +990,7 @@
       }
     },
     "Strong Mode makes it hard to continue to the distracting App while the counter is still counting. Strong Mode is automatically active in Lockdown Mode." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -992,6 +1094,15 @@
         }
       }
     },
+    "Timeout" : {
+
+    },
+    "Timeout Duration:" : {
+
+    },
+    "Timeout Time:" : {
+
+    },
     "Timer Duration %@ Seconds" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1025,6 +1136,9 @@
         }
       }
     },
+    "Timer Time:" : {
+
+    },
     "To make this work seamlessly, the app relies on Apple’s Shortcuts Automation. You’ll need to download and install a Shortcut for this feature to function. Don’t worry, it’s easy to set up, completely secure, and I don’t collect any of your personal data. Your privacy is my priority!" : {
       "localizations" : {
         "de" : {
@@ -1034,6 +1148,9 @@
           }
         }
       }
+    },
+    "Waiting Time:" : {
+
     },
     "What happens if I close the app while the timer is running?" : {
       "extractionState" : "manual",
@@ -1078,6 +1195,7 @@
       }
     },
     "When not in Lockdown Mode, distracting Apps get closed after 5 Minutes" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1120,6 +1238,19 @@
         }
       }
     },
+    "You already used all daily sessions of %@. You can use %@ tomorrow again." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You already used all daily sessions of %1$@. You can use %2$@ tomorrow again."
+          }
+        }
+      }
+    },
+    "You can adjust all times afterwards." : {
+
+    },
     "You can buy me a coffee here:" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1131,7 +1262,57 @@
         }
       }
     },
+    "You can now continue to %@." : {
+
+    },
+    "You can stay in %@ for a maximum of %@, then you need to wait for %@ before you can use it again. You need to stay at **Stop Distraction** until the Timer is done." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You can stay in %1$@ for a maximum of %2$@, then you need to wait for %3$@ before you can use it again. You need to stay at **Stop Distraction** until the Timer is done."
+          }
+        }
+      }
+    },
+    "You can use %@ for %@. Then you need to wait for %@ until you can use it again. No need to stay at **Stop Distraction** for this waiting time." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You can use %1$@ for %2$@. Then you need to wait for %3$@ until you can use it again. No need to stay at **Stop Distraction** for this waiting time."
+          }
+        }
+      }
+    },
+    "You can use %@ only three times a day for each five minutes." : {
+
+    },
+    "You can use %@, but after a given time you need to take a break till you can continue (60 Seconds, but active waiting)" : {
+
+    },
+    "You have %@ more times left to open %@ today." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You have %1$@ more times left to open %2$@ today."
+          }
+        }
+      }
+    },
+    "You have %@ Sessions per Day. Meaning before using %@ you need to start a Session. Then you can use %@ for %@ until you need to start a new Session." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You have %1$@ Sessions per Day. Meaning before using %2$@ you need to start a Session. Then you can use %3$@ for %4$@ until you need to start a new Session."
+          }
+        }
+      }
+    },
     "You're stronger than any distraction, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1142,6 +1323,7 @@
       }
     },
     "You've made it this far, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1173,6 +1355,7 @@
       }
     },
     "Your Name:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
